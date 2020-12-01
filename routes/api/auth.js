@@ -10,7 +10,7 @@ const Password = require('../../controllers/password');
 router.get('/', auth, Password.getUser);
 
 // @route for get users
-router.get('/users', Password.getallUsers);
+router.get('/users', auth, Password.getallUsers);
 
 // @route for login
 router.post('/login', [
